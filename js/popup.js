@@ -1,3 +1,5 @@
+
+
 document.addEventListener("DOMContentLoaded", () => {
     // GET THE SELECTORS OF THE BUTTONS
     const startVideoButton = document.querySelector("button#start_video")
@@ -14,6 +16,7 @@ document.addEventListener("DOMContentLoaded", () => {
                     console.log(chrome.runtime.lastError, 'error line 14')
                 }
             })
+            chrome.runtime.sendMessage({ action: "request_recording" },)
         })
     })
 
